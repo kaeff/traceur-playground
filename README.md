@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kaeff/traceur-playground.svg?branch=master)](https://travis-ci.org/kaeff/traceur-playground)
+
 # traceur-playground
 
 A little playground for learning functional ES6.
@@ -5,8 +7,8 @@ A little playground for learning functional ES6.
 ## Installation
 
     npm install
-    grunt traceur
-    
+    grunt build
+
 ## Usage
 
 Keep this running to automatically build & test
@@ -15,7 +17,7 @@ Keep this running to automatically build & test
 
 Build once
 
-    grunt traceur
+    grunt build
 
 Test once
 

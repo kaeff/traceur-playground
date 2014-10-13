@@ -49,4 +49,5 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', ['shell:jasmine']);
+  grunt.registerTask('build', ['traceur']);
 };
