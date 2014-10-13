@@ -1,0 +1,25 @@
+{
+  "name": "traceur-playground",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-traceur": "^0.2.9",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^1.0.0",
+    "traceur": "^0.0.66"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-traceur": "^0.2.9",
+    "load-grunt-tasks": "^0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "kaeff",
+  "license": "MIT"
+}
