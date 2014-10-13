@@ -1,9 +1,15 @@
-var reduce = (...args) => a => a.reduce(...args);
+import { reduce } from './lib';
 
-var flatten = reduce((memo, e) => {
+var applicativeFlatten = a => a.reduce((memo, e) => {
+   Array.isArray(e) ? memo.push(...e) : memo.push(e);
+   return memo;
+ }, []);
+
+var mutableFlatten = a => a.reduce((memo, e) => {
   Array.isArray(e) ? memo.push(...e) : memo.push(e);
   return memo;
 }, []);
 
-console.log('flatten( [1] ):', flatten( [1] ));
-console.log('flatten( [1, [2]] )', flatten( [1, [2]] ));
+export var flatten = reduce(
+  (memo, e) => Array.isArray(e) ? [...memo, ...e] : [...memo, e] , []
+);

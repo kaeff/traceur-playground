@@ -13,8 +13,8 @@ module.exports = function (grunt) {
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       traceur: {
-        files: ['src/es6/**/*.js'],
-        tasks: ['traceur']
+        files: ['{src,test}/es6/**/*.js'],
+        tasks: ['traceur', 'test']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -32,11 +32,21 @@ module.exports = function (grunt) {
           cwd: 'src/es6',
           src: ['*.js'],
           dest: 'src/es5'
+        },{
+          expand: true,
+          cwd: 'test/es6',
+          src: ['*.js'],
+          dest: 'test/es5'
         }]
+      }
+    },
+
+    shell: {
+      jasmine: {
+        command: 'node_modules/.bin/jasmine-node test/es5'
       }
     }
   });
 
-  grunt.registerTask('default', 'watch:traceur');
-  grunt.registerTask('test', 'jasmine');
+  grunt.registerTask('test', ['shell:jasmine']);
 };
