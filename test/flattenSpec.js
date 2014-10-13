@@ -1,5 +1,5 @@
 import 'traceur';
-import { flatten } from '../../src/es5/flatten';
+import { flatten } from '../src/flatten';
 
 describe('flatten', () => {
   it('leaves simple values as-is', () => {

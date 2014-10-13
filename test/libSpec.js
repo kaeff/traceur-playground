@@ -1,5 +1,5 @@
 import 'traceur';
-import { reduce } from '../../src/es5/lib';
+import { reduce } from '../src/lib';
 
 describe('reduce', () => {
   it('curries reduce and splat magic', () => {
